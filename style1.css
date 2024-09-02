@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fuente-principal);
+}
+
+:root{
+  --fuente-principal:"Montserrat";
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(fts/fondo1.jpeg);
+    /* background-position: center; */
+    background-size: cover;
+}
+
+.atras{
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  background-color: white;
+  color: black;
+  border-radius: 10em;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+  animation: slide-in-left 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.atras:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+}
+
+.atras:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+.letter-container {
+    background-color: rgba(255, 255, 255, .15);
+    color: white;
+    padding: 40px;
+    margin: 20px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    max-width: 800px;
+    width: 100%;
+    height: 525px; /* Altura fija */
+    border-radius: 5px;
+    overflow-y: auto; /* Scroll vertical cuando sea necesario */
+    box-sizing: border-box;
+    animation: slide-in-bottom 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    backdrop-filter: blur(5px);
+}
+
+.letter-container::-webkit-scrollbar{
+  width: 3px;
+  background-color:  rgb(255, 255, 255);
+}
+
+.letter-container::-webkit-scrollbar-thumb{
+  background-color:  rgba(255, 255, 255, .15);
+}
+
+.letter-container h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.letter-container p {
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.letter-container .signature {
+    text-align: right;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+ @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

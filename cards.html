@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARA QUE VEAS LO MUCHO QUE TE AMO!</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="stylecards.css">
+        <!-- ICONO -->
+       <link rel="shortcut icon" href="fts/logo.jpeg" type="image/x-icon">
+       <!-- FUENTES -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+       <!-- Sweet Alerts -->
+       <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+</head>
+<body>
+    <section class="box">
+        <div class="cards-container">
+            <div class="card cb" onclick="goToPage('dia1')">
+                <img src="fts/dia1.jpeg" alt="Imagen 1">
+                <p>El dia 1</p>
+            </div>
+            <div class="card ct">
+                <img src="" alt="">
+                <p>Se desbloqueara en 1 dia!</p>
+            </div>
+            <div class="card cb">
+                <img src="" alt="">
+                <p>Se desbloqueara en 2 dias!</p>
+            </div>
+            <div class="card ct">
+                <img src="" alt="">
+                <p>Se desbloqueara en 3 dias!</p>
+            </div>
+            <div class="card cb">
+                <img src="" alt="">
+                <p>Se desbloqueara en 4 dias!</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    function goToPage(page) {
+        alert(`Navegando a ${page}`);
+        // Puedes redirigir a otra página usando window.location.href
+        window.location.href = `${page}.html`;
+    }
+    Swal.fire({
+        title: 'Esta pagina tiene varias cards, las cuales se desbloquearan por dia!',
+        text: "Quieres verlas?",
+        icon: 'warning',
+        color: '#fff',
+        showCancelButton: true,
+        confirmButtonColor: '#019C0F',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'No quiero',
+        confirmButtonText: 'Si quiero'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title:'Bienvenida mi Amor!',
+            text:'Disfruta estas cards que hice con amor para ti!',
+            icon:'success',
+            color:'#fff',
+        })
+        }
+      })
+</script>
+</html>
