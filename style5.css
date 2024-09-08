@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Playfair+Display&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root{
+    --fuente-principal:"Montserrat";
+    --fuente-secundaria:"Shadows Into Light";
+  }
+  
+
+body {
+    font-family: 'Domine', serif;
+    background-color: #f4f0e5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #111;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+header {
+    text-align: center;
+    background-color: #ded6c5;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 10px 0 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px;
+    line-height: 1.6;
+}
+
+.tit{
+    text-align: center;
+    background-color: #ded6c5;
+    padding: 20px;
+}
+
+.tit h1 {
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+}
+
+.column {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.column img {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #bbb;
+}
+
+.video-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.video-section video {
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid #333;
+    background-color: #ddd;
+}
+
+/* Nueva sección: Por qué la elegí */
+.why-section {
+    padding: 40px;
+    background-color: #f4f0e5;
+    text-align: center;
+}
+
+.why-section .cartita {
+    width: 80%;
+    border: 2px solid #bbb;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    font-family: var(--fuente-secundaria);
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 125px;
+}
+
+/* Preguntas tipo juego */
+.question-game {
+    padding: 40px;
+    background-color: #e8e3d3;
+    text-align: center;
+    display: none;
+}
+
+.question-game button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #111;
+    cursor: pointer;
+    font-family: 'Domine', serif;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Animaciones para las preguntas */
+.question-game-anim {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.final-question {
+    padding: 40px;
+    background-color: #e8e3d3;
+    text-align: center;
+    display: none;
+}
+
+.final-question button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 10px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #111;
+    cursor: pointer;
+    font-family: 'Domine', serif;
+    display: block;
+    margin: 20px auto;
+}
+
+.music-control{
+    position: fixed;
+    top: 30px;
+    left: 25px;
+    background-color: white;
+    color: black;
+    border-radius: 10em;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+    animation: slide-in-left 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  .music-control:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+  }
+  
+  .music-control:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+  }
+
+  .atras{
+    position: fixed;
+    top: 30px;
+    right: 25px;
+    background-color: white;
+    color: black;
+    border-radius: 10em;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid black;
+    box-shadow: 0 0 0 0 black;
+    animation: slide-in-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  .atras:hover {
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 2px 5px 0 0 black;
+  }
+  
+  .atras:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+  }
+
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
